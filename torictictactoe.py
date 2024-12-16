@@ -1,5 +1,5 @@
 grid = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"]
-players = ["X","O"]
+players = ["\033[0;34m\033[1m\033[4mX\033[1\033[0m\033[4m","\033[0;31m\033[1m\033[4mO\033[0m\033[4m"]
 wins=[]
 moves=[[],[]]
 def row(num,m):
@@ -47,4 +47,6 @@ def game(m):
                 break
         if(x==1):
             break
+    if(x==0):
+        print("Tie")
 game(4)
